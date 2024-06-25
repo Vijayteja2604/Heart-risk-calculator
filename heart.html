@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardiac Risk Estimator</title>
+    <link rel="stylesheet" href="stylee.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cardiac Risk Estimator</h1>
+        <form id="risk-form">
+            <label for="age">Age (19-80):</label>
+            <input type="number" id="age" name="age" min="19" max="80" required>
+            
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Female</label>
+            
+            <label for="race">Race:</label>
+            <select id="race" name="race" required>
+                <option value="indian">Indian</option>
+                <option value="white">White</option>
+                <option value="african-american">African American</option>
+            </select>
+            
+            <label>Smoker:</label>
+            <input type="radio" id="current" name="smoker" value="current" required>
+            <label for="current">Current</label>
+            <input type="radio" id="former" name="smoker" value="former" required>
+            <label for="former">Former</label>
+            <input type="radio" id="never" name="smoker" value="never" required>
+            <label for="never">Never</label>
+            
+            <label for="systolic-bp">Systolic Blood Pressure (mmHg):</label>
+            <input type="number" id="systolic-bp" name="systolic-bp" required>
+            
+            <label for="diastolic-bp">Diastolic Blood Pressure (mmHg):</label>
+            <input type="number" id="diastolic-bp" name="diastolic-bp" required>
+            
+            <label for="total-cholesterol">Total Cholesterol (mg/dL):</label>
+            <input type="number" id="total-cholesterol" name="total-cholesterol" required>
+            
+            <label for="hdl-cholesterol">HDL Cholesterol (mg/dL):</label>
+            <input type="number" id="hdl-cholesterol" name="hdl-cholesterol" required>
+            
+            <label for="ldl-cholesterol">LDL Cholesterol (mg/dL):</label>
+            <input type="number" id="ldl-cholesterol" name="ldl-cholesterol">
+            
+            <label>History of Diabetes:</label>
+            <input type="radio" id="yes" name="diabetes" value="yes" required>
+            <label for="yes">Yes</label>
+            <input type="radio" id="no" name="diabetes" value="no" required>
+            <label for="no">No</label>
+            
+            <button type="submit">Calculate Risk</button>
+        </form>
+        <div id="result">
+            <h2>Estimated Risk: <span id="risk-percentage">-</span>%</h2>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
