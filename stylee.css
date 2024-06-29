@@ -1,63 +1,191 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+/* Ensure body and html take full height */
+html, body {
     margin: 0;
-    padding: 20px;
-}
-
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    text-align: center;
-}
-
-form {
-    display: grid;
-    gap: 15px;
-}
-
-label {
-    font-weight: bold;
-}
-
-input[type="number"],
-select {
+    padding: 0;
+    height: 100%;
     width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    font-family: Arial, sans-serif; /* Replace with your desired font */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
-input[type="radio"] {
-    margin-right: 5px;
+/* Header styling */
+.header {
+    display: flex;
+    justify-content: space-between; /* Distribute items horizontally */
+    align-items: center; /* Center vertically */
+    background-image:linear-gradient(rgba(206, 196, 196, 0.6),rgba(221, 214, 214, 0.6)); /* Header background color */
+    color: rgb(139, 10, 10); /* Text color */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for header */
+  
 }
 
-button {
+/* Header content styling */
+.header-content {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    justify-content: center; /* Center items horizontally */
+    flex-grow: 1; /* Allow it to grow to occupy available space */
+    text-align: center;
+    text-shadow: #1b1a1a;
+}
+
+.logo img {
+    height: 50px; /* Adjust height */
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.header h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 1.5rem; /* Adjust font size */
+}
+/* Menu icon styling */
+.menu-icon {
+    margin-right: 0px; /* Adjust margin as needed */
+    align-content: right;    
+}
+
+.menu-icon i {
+    font-size: 30px; /* Adjust icon size */
+}
+
+/* Background styling */
+.background {
+    background-image: linear-gradient(rgba(204, 139, 139, 0.23), rgba(204, 139, 139, 0.23)), url('images/pixelcut-export.jpeg'); /* Replace with your image URL */
+    background-size: cover; /* Cover entire area */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent repeating */
+    min-height: calc(100vh - 100px); /* Full height minus header height */
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+/* Box styling */
+.box {
+    background-color: rgba(59, 56, 66, 0.8); /* Semi-transparent white */
     padding: 10px;
-    background: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for content box */
+    width: 80%; /* Adjust width as needed */
+    max-width: 800px; /* Maximum width */
+    text-align: center; /* Center text inside the box */
+    align-self: flex-start; /* Align box to the top */
+    margin-left: 20px; /* Add some margin to the left if needed */
+}
+
+.box p {
+    color: #c4cad8;
+    font-weight: bolder;
+    font-size: medium;
+}
+
+/* Menu styling */
+#menu {
+    display: none;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    position: absolute;
+    top: 0px; /* Adjust top position to match header height */
+    right: 0;
+    width: 200px;
+    height: calc(100vh - 60px); /* Full height minus header height */
+    z-index: 1000;
+    text-align: left;
+}
+
+#menu a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin: 10px 0;
     cursor: pointer;
 }
 
-button:hover {
-    background: #0056b3;
+.close-menu {   
+    display: block;
+    color: #fff;
+    text-align: right;
+    cursor: pointer;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-#result {
-    margin-top: 20px;
+.box2{
+    width: 80%;
+    max-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-100%,-30%);
+    background: #d1cfcf;
+    background-image: linear-gradient(rgb(230, 226, 226),rgba(241, 237, 237, 0.986));
+    padding: 20px 60px 70px ;
     text-align: center;
+    border-radius: 20px;
+    background: transparent;
+    border: 1 px solid rgba(0, 0, 0, 0.6);
+    backdrop-filter:blur(5px);
+    box-shadow:0 0 10px rgba(0, 0, 0, 0.2) ;
+
+
+}
+.box2 h1{
+    font-size: 40px;
+    color: rgb(16, 8, 126);
+    margin-bottom: 60px;
+    position: relative;
+}
+.input-types{
+    background: #eceaea;
+    margin: 15px 0px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    
+}
+input{
+    width: 100%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 18px 15px;
+}
+.input-types i{
+    margin-left: 15px;
+    color: rgb(16, 8, 126);;
+}
+.inputs p{
+    text-align: left;
+    font-size: 16px;
+    color: rgb(16, 8, 126);
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-weight: bolder;
+}
+.inputs p a{
+    text-decoration: none;
+    color:#1b1a1a;
+    padding: 10px;
+}
+.btnfield{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.btnfield button{
+    flex-basis: 48%;
+    background: rgb(235, 53, 7);
+    color: #fff;
+    height: 40px;
+    border-radius: 30px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: background 1s;
+    
 }
 
-#risk-percentage {
-    font-size: 1.5em;
-    color: #dc3545;
-}
