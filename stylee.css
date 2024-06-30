@@ -1,78 +1,78 @@
-/* Ensure body and html take full height */
+
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
-    font-family: Arial, sans-serif; /* Replace with your desired font */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    font-family: Arial, sans-serif; 
+    box-sizing: border-box; 
 }
 
 /* Header styling */
 .header {
     display: flex;
-    justify-content: space-between; /* Distribute items horizontally */
-    align-items: center; /* Center vertically */
-    background-image:linear-gradient(rgba(206, 196, 196, 0.6),rgba(221, 214, 214, 0.6)); /* Header background color */
-    color: rgb(139, 10, 10); /* Text color */
+    justify-content: space-between; 
+    align-items: center;
+    background-image:linear-gradient(rgba(206, 196, 196, 0.6),rgba(221, 214, 214, 0.6)); 
+    color: rgb(139, 10, 10); 
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for header */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
   
 }
 
-/* Header content styling */
+
 .header-content {
     display: flex;
-    align-items: center; /* Align items vertically in the center */
-    justify-content: center; /* Center items horizontally */
-    flex-grow: 1; /* Allow it to grow to occupy available space */
+    align-items: center; 
+    justify-content: center; 
+    flex-grow: 1; 
     text-align: center;
     text-shadow: #1b1a1a;
 }
 
 .logo img {
-    height: 50px; /* Adjust height */
-    margin-right: 10px; /* Space between logo and text */
+    height: 50px; 
+    margin-right: 10px; 
 }
 
 .header h1 {
-    margin: 0; /* Remove default margin */
-    font-size: 1.5rem; /* Adjust font size */
-}
-/* Menu icon styling */
+    margin: 0; 
+    font-size: 1.5rem; 
+}   
+
 .menu-icon {
-    margin-right: 0px; /* Adjust margin as needed */
+    margin-right: 0px; 
     align-content: right;    
 }
 
 .menu-icon i {
-    font-size: 30px; /* Adjust icon size */
+    font-size: 30px; 
 }
 
-/* Background styling */
+
 .background {
     background-image: linear-gradient(rgba(204, 139, 139, 0.23), rgba(204, 139, 139, 0.23)), url('images/pixelcut-export.jpeg'); /* Replace with your image URL */
-    background-size: cover; /* Cover entire area */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Prevent repeating */
-    min-height: calc(100vh - 100px); /* Full height minus header height */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    min-height: calc(100vh - 100px); 
     padding: 20px;
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    justify-content: center; 
+    align-items: center; 
 }
 
 /* Box styling */
 .box {
-    background-color: rgba(59, 56, 66, 0.8); /* Semi-transparent white */
+    background-color: rgba(59, 56, 66, 0.8); 
     padding: 10px;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for content box */
-    width: 80%; /* Adjust width as needed */
-    max-width: 800px; /* Maximum width */
-    text-align: center; /* Center text inside the box */
-    align-self: flex-start; /* Align box to the top */
-    margin-left: 20px; /* Add some margin to the left if needed */
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    width: 80%; 
+    max-width: 800px; 
+    text-align: center; 
+    align-self: flex-start; 
+    margin-left: 20px; 
 }
 
 .box p {
@@ -88,12 +88,15 @@ html, body {
     color: #fff;
     padding: 10px;
     position: absolute;
-    top: 0px; /* Adjust top position to match header height */
+    top: 0px; 
     right: 0;
     width: 200px;
-    height: calc(100vh - 60px); /* Full height minus header height */
+    height: calc(100vh - 60px);
     z-index: 1000;
     text-align: left;
+    box-shadow:0 0 10px rgba(0, 0, 0, 0.2) ;
+
+    
 }
 
 #menu a {
